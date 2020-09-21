@@ -1,0 +1,123 @@
+// Global Styles
+@import "global/variables";
+@import "global/reset.scss";
+
+*,
+*:after,
+*:before {
+  -webkit-backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+
+html {
+  touch-action: manipulation;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #FAFAFA;
+}
+
+// AVOID CHANGING
+.main {
+  min-height: 100vh;
+  padding: 150px 0;
+  width: 100%;
+}
+
+// AVOID CHANGING
+.main-wrapper {
+  margin: 0 auto;
+  max-width: $bk-desktop;
+}
+
+// Components
+// Go to 8 units of precision in your CSS.
+// Example: 33.33333333% or 66.66666667%
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+
+  .card-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #E88510;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+
+  .card-cover {
+    overflow: hidden;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 35px;
+
+    .card-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #090D62;
+      margin: 20px 0 20px 0;
+    }
+    
+    .card-content {
+      word-wrap: break-word;
+    }
+  }
+}
+
+
+@media (min-width: $bk-tablet) {
+  .card {
+    width: 30%;
+    
+    .card-cover {
+      height: 250px;
+    }
+  }
+}
+
+
+@media (max-width: $bk-tablet) {
+  .card {
+    width: 50%;
+
+    .card-cover {
+      height: 200px;
+    }
+  }
+}
+
+
+@media (max-width: $bk-min) {
+  .card {
+    width: 100%;
+    
+    .card-cover {
+      height: 180px;
+    }
+  }
+}
+
+
+
